@@ -39,4 +39,10 @@ const Character = connection.define(
   }
 );
 
+const initTable = async () => {
+	await Character.sync();
+};
+
+initTable();
+
 module.exports = Character;
