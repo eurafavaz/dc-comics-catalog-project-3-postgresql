@@ -49,7 +49,7 @@ main {
 	margin: 0 10rem 0 10rem;
 }
 
-section#cards{
+section#cards {
 	display: flex;
     justify-content: space-evenly;
 	flex-wrap: wrap;
@@ -136,13 +136,6 @@ section#cards div.card p.alias {
     margin-bottom: 1rem;
 }
 
-
-
-
-
-
-
-
 section#register {
 	display: flex;
 	justify-content: center;
@@ -223,3 +216,139 @@ footer {
   footer a:hover{
 	color: #19181D;
   }
+
+.modal-overlay {
+	background-color: #00000070;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-y: auto;
+}
+
+.modal {
+	margin: 1rem;
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+	min-height: 300px;
+	background-color: #fff;
+	border-radius: 25px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	background-color: #0282F9;
+	padding: 1rem;
+	color: #fff;
+}
+
+.modal-header a#close-modal-put {
+	font-size: 1.4rem;
+	color: #fff;
+	text-decoration: none;
+}
+
+.modal-body {
+	padding: .5rem 1rem;
+	flex: 1;
+	display: flex;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+.form-modal {
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.form-modal input {
+	width: 100%;
+	padding: .3rem;
+	font-size: 1rem;
+	outline: none;
+	border-radius: 5px;
+	border: solid 1px rgb(67, 67, 67);
+	margin: 0 0 .5rem 0;
+}
+
+.form-modal label {
+	color: rgb(67, 67, 67);
+	font-weight: 600;
+	font-size: .8rem;
+}
+
+.form-modal button {
+	padding: .8rem;
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	margin: 1rem auto;
+	border-radius: 30px;
+	font-size: 1rem;
+	background-color: #ffffff;
+	border: solid 1px rgb(67, 67, 67);
+	color: rgb(67, 67, 67);
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	text-decoration: none;
+	margin-top: 1.5rem;
+}
+
+.form-modal button:hover {
+	background-color: #0282F9;
+	color: rgb(255, 255, 255);
+	border: solid 1px #0282F9;
+}
+
+.modal-body p {
+	width: 100%;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+div#btns-del {
+	display: flex;
+	margin: 0 auto;
+}
+
+div#btns-del a {
+	padding: .7rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 2rem 1rem 1rem;
+	border-radius: 10px;
+	font-size: 1rem;
+	background-color: #ffffff;
+	border: solid 1px rgb(67, 67, 67);
+	color: rgb(67, 67, 67);
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	text-decoration: none;
+}
+
+div#btns-del a#no:hover {
+	background-color: #c22828;
+	color: rgb(255, 255, 255);
+	border: solid 1px #c22828;
+}
+
+div#btns-del a#yes:hover {
+	background-color: #0c8201;
+	color: rgb(255, 255, 255);
+	border: solid 1px #0c8201;
+}
+
+
+
