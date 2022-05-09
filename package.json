@@ -1,0 +1,25 @@
+{
+  "name": "dc-comics-catalog-project-3-mod-2",
+  "version": "1.0.0",
+  "description": "DC Comics character catalog for the third educational project of the second module of the Blue EdTech Web Development",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eurafavaz/dc-comics-catalog-project-3-mod-2.git"
+  },
+  "author": "Rafael Vaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eurafavaz/dc-comics-catalog-project-3-mod-2/issues"
+  },
+  "homepage": "https://github.com/eurafavaz/dc-comics-catalog-project-3-mod-2#readme",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DC Comics Characters</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/">
+                    <img src="/img/dc-white-logo.png" alt="DC White Logo">
+                </a>
+            </li>
+            <li><h1>DC Comics Characters</h1></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#cards">Characters</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="/img/banner.jpg" alt="banner">
+    </header>
+
+    <main>
+
+        <section id="register">
+
+            <img src="/img/dc_comics-logo.png" alt="DC Logo">
+
+            <div>
+                <% if (character == undefined) { %>
+
+                <h2>Register a new super hero!</h2>
+
+                <form action="/create" method="POST">
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+
+                    <label for="alias">Alias:</label>
+                    <input type="text" id="alias" name="alias">
+
+                    <label for="powers">Powers:</label>
+                    <input type="text" id="powers" name="powers">
+
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" name="description">
+
+                    <label for="image">Image link:</label>
+                    <input type="url" id="image" name="image">
+
+                    <button id="btnSend" type="submit">Submit now</button>
+                
+                </form>
+                <% } else { %>
+
+                <h2>Update the super hero</h2>
+
+                <form action="/update/<%= character.id %>" method="POST">
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="<%= character.name %>">
+
+                    <label for="alias">Alias:</label>
+                    <input type="text" id="alias" name="alias" value="<%= character.alias %>">
+
+                    <label for="powers">Powers:</label>
+                    <input type="text" id="powers" name="powers" value="<%= character.powers %>">
+
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" name="description" value="<%= character.description %>">
+
+                    <label for="image">Image link:</label>
+                    <input type="url" id="image" name="image" value="<%= character.image %>">
+
+                    <button id="btnUpdate" type="submit">Update now</button>
+                
+                </form>
+                <% } %>
+            </div>
+
+        </section>
+
+        <section id="cards">
+
+            <h2>Who's who in DC Universe?</h2>
+
+            <% characters.forEach((character) => { %>
+                <div class="card">
+                    <p><%= character.id %></p>
+                    <img src="<%= character.image %>" alt="">
+                    <h3><%= character.name %></h3>
+                    <p class="alias"><%= character.alias %></p>
+                    <p><%= character.powers %></p>
+                    <p class="description"><%= character.description %></p>
+                    <a id="edit" href="/details/<%= character.id %>">Edit</a>
+                    <a id="delete" href="/delete/<%= character.id %>">Delete</a>
+                </div>
+            <% }) %>
+        
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            <a href="https://github.com/eurafavaz" target="_blank"> Created by Rafael Vaz </a>
+            - All Rights Reserved (DC Comics) &copy;
+        </p>
+    </footer>
+
+</body>
+</html>
